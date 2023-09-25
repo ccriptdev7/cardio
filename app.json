@@ -4,6 +4,10 @@
     "slug": "maps",
     "version": "1.0.0",
     "orientation": "portrait",
+    "jsEngine": "hermes",
+    "ios": {
+      "jsEngine": "jsc"
+    },
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -11,9 +15,16 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
+    "plugins": [
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox",
+          "RNMapboxMapsDownloadToken": "pk.eyJ1IjoicGl4ZWxibG9jay1wYiIsImEiOiJja3VzZmxibjMwcnAyMm9vZDM5N2pkeTZuIn0.v23swpuxdhMzslDRyJqFtA"
+        }
+      ]
     ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
